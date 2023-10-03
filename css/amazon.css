@@ -61,16 +61,15 @@ header {
   color: white;
   text-align: center;
   align-items: center;
-}
-.one .img img {
-  width: 136px;
   height: 100%;
-  cursor: pointer;
+}
+.one img {
+  width: 136px;
   height: 100%;
   border: 3px groove black;
   cursor: pointer;
 }
-.one .img img:hover {
+.one img:hover {
   border: 3px groove white;
 }
 .eg {
