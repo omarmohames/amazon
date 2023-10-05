@@ -65,25 +65,27 @@ header {
 }
 .one img {
   width: 136px;
-  height: 100%;
-  border: 3px groove black;
+  height: 85%;
+  border: 1px solid black;
   cursor: pointer;
+  border-radius: 2px;
 }
 .one img:hover {
-  border: 3px groove white;
+  border: 1px solid white;
 }
 .eg {
   width: 85px;
   background-color: #0F1111;
   position: relative;
-  height: 100%;
-  border: 3px groove black;
+  height: 85%;
+  border: 1px solid black;
   cursor: pointer;
   padding-top: 20px;
   margin-right: 5px;
+  border-radius: 2px;
 }
 .eg:hover {
-  border: 3px groove white;
+  border: 1px solid white;
 
 }
 .eg::before {
@@ -92,29 +94,63 @@ header {
   font-size: 12px;
   position: absolute;
   top: 5px;
-  right: 0;
+  right: 5px;
   color: #c9c9c9;
 
 }
 .search {
-  height: 100%;
+  height: fit-content;
   text-align: center;
   display: flex;
   align-items: center;
   flex: 1;
-  border: 3px groove black;
-
+  border: 5px solid black;
+}
+.search:active {
+  border: 5px solid #febd69;
+  border-radius: 10px;
+}
+.search select {
+  position: absolute;
+  top: 20px;
+  width: 21em;
+  max-height: 20px;
+  outline: none;
+  background-color: dodgerblue;
+  color: white;
+  display: none;
+}
+.search .all:hover select {
+  display:initial
 }
 header .all {
   background-color: #e6e6e6;
   width: 60px;
   height: 40px;
-  border-radius: 3px;
+  border-radius: 2px;
   padding-top: 10px;
   color: black;
   cursor: pointer;
-
-
+  position: relative;
+}
+header .all::before {
+  border-style: solid;
+  content: '';
+  position: absolute;
+  border-color: #666666 transparent transparent transparent;
+  top: 44%;
+  right: 6px;
+  border-width: 5px;
+}
+header .all::after {
+  content: '';
+  
+}
+header .all:hover, header .all:active {
+  box-shadow: 0 0 4px 4px #f90;
+}
+header .all:hover {
+  background-color: #d4d4d4;
 }
 header input {
   width: 18em;
@@ -123,7 +159,14 @@ header input {
   border: none;
   margin-left: -3px;
   flex: 1;
-
+  outline: none;
+}
+header  input::before {
+  content: '';
+  height: calc(100vh - 115px);
+  background-color: #666666;
+  position: absolute;
+  bottom: 0;
 }
 header .fa-magnifying-glass {
   padding-left: 3px;
@@ -135,25 +178,33 @@ header .fa-magnifying-glass {
   padding-top: 10px;
   font-size: 21px;
   border-radius: 3px;
-  margin-left: -1px;
-
-
+  margin-left: 0px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+header .fa-magnifying-glass:hover {
+  background-color: #f3a847;
 }
 .a {
-  width: 108px;
-  padding-top: 37px;
+  width: 90px;
+  padding-top: 26px;
   margin-left: 10px;
-  height: 100%;
-  border: 3px groove black;
+  height: 85%;
+  border: 1px solid black;
   cursor: pointer;
+  border-radius: 2px;
 }
 .a:hover {
-  border: 3px groove white;
+  border: 1px solid white;
 
 }
 .a img {
   width: 19px;
   height: 16px;
+  border: none;
+}
+.a img:hover {
+  border: none;
 }
 .a span {
   font-weight: bold;
@@ -162,18 +213,19 @@ header .fa-magnifying-glass {
   display: grid;
   grid-template-rows: 1fr 1fr;
   width: 8em;
-  height: 100%;
-  border: 3px groove black;
+  height: 85%;
+  border: 1px solid black;
   cursor: pointer;
+  border-radius: 2px;
 }
 .login:hover {
-  border: 3px groove white;
+  border: 1px solid white;
 
 }
 .login span:first-child {
   font-size: 12px;
   margin-left: -32px;
-  padding-top: 23px;
+  padding-top: 18px;
 }
 .login span:nth-child(2) {
   font-weight: 800;
@@ -187,24 +239,27 @@ header .fa-magnifying-glass {
   width: 4em;
   font-weight: 800;
   font-size: 14px;
-  height: 100%;
-  padding-top: 37px;
+  height: 85%;
+  padding-top: 27px;
   color: white;
-  border: 3px groove black;
+  border: 1px solid black;
   cursor: pointer;
+  border-radius: 2px;
 }
 .one > span:hover {
-  border: 3px groove white;
+  border: 1px solid white;
 }
 .your-list {
+
   position: relative;
   width: 92px;
-  height: 100%;
-  border: 3px groove black;
+  height: 85%;
+  border: 1px solid black;
   cursor: pointer;
+  border-radius: 2px;
 }
 .your-list:hover {
-  border: 3px groove white;
+  border: 1px solid white;
 
 }
 .your-list span:first-child {
@@ -218,8 +273,8 @@ header .fa-magnifying-glass {
 .your-list i {
   position: absolute;
   bottom: 7px;
-  font-size: 30px;
-  left: 15px;
+  font-size: 20px;
+  left: 19px;
 }
 .your-list span:nth-child(3) {
   position: absolute;
